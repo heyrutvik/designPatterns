@@ -36,3 +36,8 @@ public abstract class Publisher {
         send();
     }
 }
+
+/*
+1) strive for loosely coupled designs
+   between objects that interact
+ */
