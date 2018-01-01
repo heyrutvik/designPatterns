@@ -2,7 +2,7 @@ package factory.abstractpattern;
 
 public class WorkspaceCabinet extends Cabinet{
 
-    CabinetFactory cf = null;
+    CabinetFactory cf;
 
     public WorkspaceCabinet(CabinetFactory cf, int memory) {
         this.cf = cf;
