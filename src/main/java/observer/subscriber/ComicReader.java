@@ -24,7 +24,7 @@ public class ComicReader implements Subscriber {
         publisher.addSubscriber(this);
     }
 
-    public void update(Object o) {
+    public void update(Publisher p, Object o) {
         if (o instanceof Comic) {
             Comic c = (Comic)o;
             c.read(name);

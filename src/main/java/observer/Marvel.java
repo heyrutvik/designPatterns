@@ -17,8 +17,8 @@ public class Marvel extends Publisher {
         ComicReader komal = new ComicReader("komal",hulk);
         ComicReader kanti = new ComicReader("kanti",hulk);
 
-        ironman.setData(new Ironman("001"));
-        hulk.setData(new Hulk("001"));
+        ironman.pushMechanism(new Ironman("001"));
+        hulk.pushMechanism(new Hulk("001"));
 
         pinak.removeSubscription();
         shikha.changeSubscription(hulk);
@@ -26,7 +26,7 @@ public class Marvel extends Publisher {
         kanti.changeSubscription(ironman);
         pooja.removeSubscription();
 
-        ironman.setData(new Ironman("002"));
-        hulk.setData(new Hulk("002"));
+        ironman.pushMechanism(new Ironman("002"));
+        hulk.pushMechanism(new Hulk("002"));
     }
 }

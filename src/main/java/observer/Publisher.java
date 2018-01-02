@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public abstract class Publisher {
 
     private ArrayList subscribers;
-    protected Object data;
 
     public Publisher() {
         subscribers = new ArrayList();
@@ -24,16 +23,23 @@ public abstract class Publisher {
         }
     }
 
-    public void send() {
+    public void notifySubscribers(Object o) {
         for (Object sub : subscribers) {
             Subscriber s = (Subscriber)sub;
-            s.update(data);
+            s.update(this, o);
         }
     }
 
-    public void setData(Object o) {
-        data = o;
-        send();
+    public void notifySubscribers() {
+        notifySubscribers(null);
+    }
+
+    public void pushMechanism(Object o) {
+        notifySubscribers(o);
+    }
+
+    public void pullMechanism() {
+        notifySubscribers();
     }
 }
 
