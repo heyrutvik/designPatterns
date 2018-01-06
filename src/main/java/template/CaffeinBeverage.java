@@ -6,7 +6,9 @@ public abstract class CaffeinBeverage {
         boilWater();
         brew();
         pourInCup();
-        addCondiments();
+        if (askCustomer()) {
+            addCondiments();
+        }
     }
 
     abstract void brew();
@@ -28,4 +30,7 @@ public abstract class CaffeinBeverage {
         CaffeinBeverage tea = new Tea();
         tea.prepareRecipe();
     }
+
+    // hook
+    boolean askCustomer() {return true;}
 }
