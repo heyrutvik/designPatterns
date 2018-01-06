@@ -12,12 +12,12 @@ public class Client {
         i.setCommand(bar);
         i.run();
 
-        i.unrun();
+        i.unRun();
 
         Command[] cs = {foo, bar};
         Command mc = new MacroCommand(cs);
         i.setCommand(mc);
         i.run();
-        i.unrun();
+        i.unRun();
     }
 }

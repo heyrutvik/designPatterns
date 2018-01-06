@@ -4,9 +4,14 @@ public class Invoker {
     Command c;
     Command lc;
 
+    public Invoker() {
+        Command nc = new NoCommand();
+        this.c = nc;
+        this.lc = nc;
+    }
+
     public void setCommand(Command c) {
         this.c = c;
-        this.lc = new NoCommand();
     }
 
     public void run() {
@@ -14,7 +19,7 @@ public class Invoker {
         c.execute();
     }
 
-    public void unrun() {
+    public void unRun() {
         lc.undo();
     }
 }
