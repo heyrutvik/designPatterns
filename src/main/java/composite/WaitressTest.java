@@ -22,8 +22,10 @@ public class WaitressTest {
         allMenu.add(breakfast);
         allMenu.add(lunch);
         allMenu.add(diner);
-        
+
         Waitress waitress = new Waitress(allMenu);
-        waitress.print();
+        waitress.internalIteratorPrint();
+        System.out.println("---------------------------------");
+        waitress.externalIteratorPrint();
     }
 }
