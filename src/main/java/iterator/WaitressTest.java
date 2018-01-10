@@ -7,7 +7,7 @@ public class WaitressTest {
         ArrayList menus = new ArrayList();
         menus.add(new BreakfastMenu());
         menus.add(new LunchMenu());
-        menus.add(new DinnerMenu());
+        menus.add(new DinerMenu());
         Waitress w = new Waitress(menus);
         w.printMenu();
     }
