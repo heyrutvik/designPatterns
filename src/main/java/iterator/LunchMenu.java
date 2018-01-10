@@ -1,6 +1,8 @@
 package iterator;
 
-public class LunchMenu {
+import java.util.Iterator;
+
+public class LunchMenu implements Menu {
     static final int MAX_ITEMS = 3;
     int currentIndex = 0;
     MenuItem[] menuItems;

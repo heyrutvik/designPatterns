@@ -1,24 +1,22 @@
 package iterator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Waitress {
 
-    BreakfastMenu breakfastMenu;
-    LunchMenu lunchMenu;
+    ArrayList menus;
 
-    public Waitress(BreakfastMenu breakfastMenu, LunchMenu lunchMenu) {
-        this.breakfastMenu = breakfastMenu;
-        this.lunchMenu = lunchMenu;
+    public Waitress(ArrayList menus) {
+        this.menus = menus;
     }
 
     public void printMenu() {
-        Iterator breakfastItems = breakfastMenu.createIterator();
-        System.out.println("---Breakfast Menu---");
-        printMenu(breakfastItems);
-        Iterator lunchItems = lunchMenu.createIterator();
-        System.out.println("\n---Lunch Menu---");
-        printMenu(lunchItems);
+        Iterator menuIter = menus.iterator();
+        while(menuIter.hasNext()) {
+            Menu menu = (Menu)menuIter.next();
+            printMenu(menu.createIterator());
+        }
     }
 
     private void printMenu(Iterator iterator) {

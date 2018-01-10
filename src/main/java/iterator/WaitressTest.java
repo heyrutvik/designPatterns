@@ -1,8 +1,14 @@
 package iterator;
 
+import java.util.ArrayList;
+
 public class WaitressTest {
     public static void main(String[] args) {
-        Waitress w = new Waitress(new BreakfastMenu(), new LunchMenu());
+        ArrayList menus = new ArrayList();
+        menus.add(new BreakfastMenu());
+        menus.add(new LunchMenu());
+        menus.add(new DinnerMenu());
+        Waitress w = new Waitress(menus);
         w.printMenu();
     }
 }
